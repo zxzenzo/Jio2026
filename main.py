@@ -1,3 +1,4 @@
+from fastapi import FastAPI, Request, Query
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 import duckdb
@@ -64,7 +65,7 @@ async def fetch_data(number: str = Query(None)):
         return {
             "status": "success",
             "Data": records,
-            "Developer": "@shreeapi"
+            "Developer": "@Hye_Genzo"
         }
     except Exception as e:
         return JSONResponse(
@@ -72,7 +73,7 @@ async def fetch_data(number: str = Query(None)):
             content={
                 "status": "error",
                 "message": f"Database error: {str(e)}",
-                "Developer": "@shreeapi"
+                "Developer": "@Hye_Genzo"
             }
         )
 
