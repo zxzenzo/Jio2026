@@ -12,7 +12,7 @@ hf_fs = HfFileSystem(token=False)
 con.register_filesystem(hf_fs)
 
 # ---- Public file URL ----
-FILE_URL = "hf://buckets/zxzengzo/jio2026/*.parquet"
+FILE_URL = "hf://buckets/zxzengzo/truecaller/*.parquet"
 
 # ---- Error handler ----
 @app.exception_handler(StarletteHTTPException)
